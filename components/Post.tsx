@@ -16,7 +16,7 @@ export default function Post() {
   });
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 p-4 md:p-0 m-4 w-3/4 items-center justify-center place-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 md:p-0 m-4 w-3/4 items-center justify-center place-items-center">
       <PostCollector posts={posts} />
     </div>
   );
