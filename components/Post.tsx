@@ -1,19 +1,16 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { PostType } from "../types/Post";
 import PostCollector from "./PostCollector";
 
 export default function Post() {
   const files = fs.readdirSync("posts");
-  const posts = files.map((fileName) => {
+  const posts: PostType[] = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
-
     const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
-
     const { data: frontmatter } = matter(readFile);
-
     return {
       slug,
-
       frontmatter,
     };
   });
