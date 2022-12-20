@@ -13,7 +13,9 @@ interface Props {
 export default function PostCollector({ posts }: Props) {
   const filterContext = useContext(FilterContext);
   const filter = filterContext?.filter;
-
+  const isHoverableDevice = window.matchMedia(
+    '(hover: hover) and (pointer: fine)'
+  )
   return (
     <>
       {filter
@@ -22,17 +24,19 @@ export default function PostCollector({ posts }: Props) {
             .map(({ slug, frontmatter }) => (
               <div
                 key={slug}
-                className="group relative hover:scale-105 hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col h-96"
+                className="group relative betterhover:hover:scale-105 betterhover:hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden
+                flex flex-col aspect-square"
               >
                 <Link href={`/post/${slug}`}>
                   <Image
-                    className="group-hover:blur-md hover:cursor-pointer z-10 duration-700 ease-out object-cover min-w-full max-w-full h-96 max-h-full min-h-full"
+                    className="group-hover:blur-md betterhover:hover:cursor-pointer z-10 duration-700 ease-out
+                    object-cover aspect-square"
                     width={650}
                     height={650}
                     alt={frontmatter.title}
                     src={`/${frontmatter.socialImage}`}
                   />
-                  <div className="top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute invisible group-hover:visible hover:visible text-white font-bold text-xl">
+                  <div className="top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute invisible group-hover:visible betterhover:hover:visible text-white font-bold text-xl">
                     {frontmatter.title}
                   </div>
                 </Link>
@@ -41,17 +45,19 @@ export default function PostCollector({ posts }: Props) {
         : posts.map(({ slug, frontmatter }) => (
             <div
               key={slug}
-              className="group relative hover:scale-105 hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden flex flex-col h-96"
+              className="group relative betterhover:hover:scale-105 betterhover:hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden
+              flex flex-col aspect-square"
             >
               <Link href={`/post/${slug}`}>
                 <Image
-                  className="group-hover:blur-md hover:cursor-pointer z-10 duration-700 ease-out object-cover min-w-full max-w-full h-96 max-h-full min-h-full"
+                  className="group-hover:blur-md betterhover:hover:cursor-pointer z-10 duration-700 ease-out
+                  object-cover aspect-square"
                   width={650}
                   height={650}
                   alt={frontmatter.title}
                   src={`/${frontmatter.socialImage}`}
                 />
-                <div className="top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute invisible group-hover:visible hover:visible text-white font-bold text-xl">
+                <div className={`top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute ${isHoverableDevice.matches ? 'invisible text-xl' : 'visible text-sm'} group-hover:visible betterhover:hover:visible text-white font-bold`}>
                   {frontmatter.title}
                 </div>
               </Link>

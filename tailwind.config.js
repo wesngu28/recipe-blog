@@ -10,6 +10,12 @@ module.exports = {
       fontFamily: {
         'space': ['Space Mono', 'Monospace']
       },
+      screens: {
+        'xxs': '400px',
+        'xs': '450px',
+        'common': '992px',
+        'betterhover': {'raw': '(hover: hover)'},
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
