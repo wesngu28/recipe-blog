@@ -11,8 +11,7 @@ interface Props {
 }
 
 export default function RecipeDynamicPage({ params: { slug } }: Props) {
-
-  const fileName = fs.readFileSync(`posts/${slug}.md`, 'utf-8');
+  const fileName = fs.readFileSync(`../../../posts/${slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return (
     <div className='prose mx-auto'>
