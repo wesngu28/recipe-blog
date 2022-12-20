@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FilterContext } from "../contexts/FilterProvider";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,11 +11,17 @@ interface Props {
 }
 
 export default function PostCollector({ posts }: Props) {
+
+  const [hoverable, setHoverable] = useState(true)
   const filterContext = useContext(FilterContext);
   const filter = filterContext?.filter;
-  const isHoverableDevice = window.matchMedia(
-    '(hover: hover) and (pointer: fine)'
-  )
+  useEffect(() => {
+    const isHoverableDevice = window.matchMedia(
+      '(hover: hover) and (pointer: fine)'
+    )
+    setHoverable(isHoverableDevice.matches)
+  }, []);
+
   return (
     <>
       {filter
@@ -57,7 +63,7 @@ export default function PostCollector({ posts }: Props) {
                   alt={frontmatter.title}
                   src={`/${frontmatter.socialImage}`}
                 />
-                <div className={`top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute ${isHoverableDevice.matches ? 'invisible text-xl' : 'visible text-sm'} group-hover:visible betterhover:hover:visible text-white font-bold`}>
+                <div className={`top-1/2 left-1/2 text-center -translate-y-1/2 -translate-x-1/2 absolute ${hoverable ? 'invisible text-xl' : 'visible text-sm'} group-hover:visible betterhover:hover:visible text-white font-bold`}>
                   {frontmatter.title}
                 </div>
               </Link>
