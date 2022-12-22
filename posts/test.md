@@ -4,7 +4,7 @@ title: 'Battle of Adys'
 
 metaDesc: 'Battle of Adys'
 
-socialImage: images/Humming.jpg
+socialImage: /images/Humming.jpg
 
 date: '2021-09-22'
 

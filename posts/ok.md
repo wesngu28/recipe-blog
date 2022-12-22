@@ -4,7 +4,7 @@ title: 'Mexican Coffee Buns'
 
 metaDesc: 'Coffee buns'
 
-socialImage: images/Viper.jpg
+socialImage: /images/Viper.jpg
 
 date: '2021-09-22'
 

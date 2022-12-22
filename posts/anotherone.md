@@ -4,7 +4,7 @@ title: 'Free Agency'
 
 metaDesc: 'The free agent market'
 
-socialImage: images/Crow.jpg
+socialImage: /images/Crow.jpg
 
 date: '2021-09-22'
 
