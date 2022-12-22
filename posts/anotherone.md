@@ -2,8 +2,6 @@
 
 title: 'Free Agency'
 
-metaTitle: 'Examining Free Agency'
-
 metaDesc: 'The free agent market'
 
 socialImage: images/Crow.jpg

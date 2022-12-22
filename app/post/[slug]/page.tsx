@@ -3,17 +3,9 @@ import matter from 'gray-matter';
 import md from 'markdown-it';
 import { resolve } from 'path';
 
-type slug = {
-  slug: string
-}
-
-interface Props {
-  params: slug
-}
-
-export default function RecipeDynamicPage({ params: { slug } }: Props) {
+export default function RecipeDynamicPage({ params }: { params: { slug: string } }) {
   const configDirectory = resolve(process.cwd(), "posts");
-  const fileName = readFileSync(`${configDirectory}/${slug}.md`, 'utf-8');
+  const fileName = readFileSync(`${configDirectory}/${params.slug}.md`, 'utf-8');
   const { data: frontmatter, content } = matter(fileName);
   return (
     <div className='prose mx-auto'>

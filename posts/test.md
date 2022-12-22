@@ -2,8 +2,6 @@
 
 title: 'Battle of Adys'
 
-metaTitle: 'Battle of Adys'
-
 metaDesc: 'Battle of Adys'
 
 socialImage: images/Humming.jpg

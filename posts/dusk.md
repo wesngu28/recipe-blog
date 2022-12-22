@@ -2,8 +2,6 @@
 
 title: 'White Chocolate Cranberry Oatmeal Cookies'
 
-metaTitle: 'White Chocolate Cranberry Oatmeal Cookies'
-
 metaDesc: 'Make cookies'
 
 socialImage: images/Howler.jpg

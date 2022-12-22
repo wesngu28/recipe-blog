@@ -2,8 +2,6 @@
 
 title: 'Mexican Coffee Buns'
 
-metaTitle: 'Next.js page options and how they work'
-
 metaDesc: 'Coffee buns'
 
 socialImage: images/Viper.jpg
