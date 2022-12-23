@@ -7,10 +7,10 @@ import Link from "next/link";
 import { PostType } from "../types/Post";
 
 interface Props {
-  posts: PostType[];
+  recipes: PostType[];
 }
 
-export default function PostCollector({ posts }: Props) {
+export default function PostCollector({ recipes }: Props) {
 
   const [hoverable, setHoverable] = useState(true)
   const filterContext = useContext(FilterContext);
@@ -25,7 +25,7 @@ export default function PostCollector({ posts }: Props) {
   return (
     <>
       {filter
-        ? posts
+        ? recipes
             .filter(({ frontmatter }) => frontmatter.categories[0] === filter)
             .map(({ slug, frontmatter }) => (
               <div
@@ -48,7 +48,7 @@ export default function PostCollector({ posts }: Props) {
                 </Link>
               </div>
             ))
-        : posts.map(({ slug, frontmatter }) => (
+        : recipes.map(({ slug, frontmatter }) => (
             <div
               key={slug}
               className="group relative betterhover:hover:scale-105 betterhover:hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden
