@@ -33,7 +33,7 @@ export default function PostCollector({ recipes }: Props) {
                 className="group relative betterhover:hover:scale-105 betterhover:hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden
                 flex flex-col aspect-square"
               >
-                <Link href={`/post/${slug}`}>
+                <Link href={`/recipes/${slug}`}>
                   <Image
                     className="group-hover:blur-md betterhover:hover:cursor-pointer z-10 duration-700 ease-out
                     object-cover aspect-square"
@@ -54,7 +54,7 @@ export default function PostCollector({ recipes }: Props) {
               className="group relative betterhover:hover:scale-105 betterhover:hover:cursor-pointer z-10 duration-700 ease-out bg-gray-50 border border-gray-200 m-2 rounded-xl shadow-lg overflow-hidden
               flex flex-col aspect-square"
             >
-              <Link href={`/post/${slug}`}>
+              <Link href={`/recipes/${slug}`}>
                 <Image
                   className="group-hover:blur-md betterhover:hover:cursor-pointer z-10 duration-700 ease-out
                   object-cover aspect-square"
