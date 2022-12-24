@@ -26,7 +26,7 @@ export default function PostCollector({ recipes }: Props) {
     <>
       {filter
         ? recipes
-            .filter(({ frontmatter }) => frontmatter.categories[0] === filter)
+            .filter(({ frontmatter }) => frontmatter.categories.includes(filter))
             .map(({ slug, frontmatter }) => (
               <div
                 key={slug}
