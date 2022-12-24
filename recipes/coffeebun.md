@@ -2,7 +2,7 @@
 
 title: 'Mexican Coffee Buns'
 
-metaDesc: 'Coffee buns'
+metaDesc: 'Learn how to make Mexican coffee buns!'
 
 socialImage: /images/Viper.jpg
 
