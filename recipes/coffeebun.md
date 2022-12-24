@@ -4,7 +4,7 @@ title: 'Mexican Coffee Buns'
 
 metaDesc: 'Learn how to make Mexican coffee buns!'
 
-socialImage: /images/Viper.jpg
+socialImage: images/Viper.jpg
 
 date: '2021-09-22'
 
