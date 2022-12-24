@@ -4,7 +4,7 @@ title: 'White Chocolate Cranberry Oatmeal Cookies'
 
 metaDesc: 'Make cookies'
 
-socialImage: /images/Howler.jpg
+socialImage: images/Howler.jpg
 
 date: '2021-09-22'
 
