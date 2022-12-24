@@ -4,7 +4,7 @@ title: 'Vietnamese Fish Sauce Wings'
 
 metaDesc: 'Make wings'
 
-socialImage: /images/wings.jpg
+socialImage: /images/chicken.jpg
 
 date: '2021-09-22'
 
