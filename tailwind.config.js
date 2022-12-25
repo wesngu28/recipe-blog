@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'space': ['Space Mono', 'Monospace']
+        'space': ['Space Mono', 'Monospace'],
+        'poppins': ['Poppins', 'sans-serif']
       },
       screens: {
         'xxs': '400px',
