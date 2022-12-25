@@ -8,7 +8,7 @@ export default function Categories() {
   const filterContext = useContext(FilterContext)
 
   return(
-    <div className="flex mt-1 justify-center flex-wrap">
+    <div className="flex my-4 justify-center flex-wrap">
       <button onClick={() => filterContext?.setFilter('')} className="m-2 p-2 bg-gray-300 hover:bg-[#cac3b7] text-black rounded-lg">
         <p>All</p>
       </button>
