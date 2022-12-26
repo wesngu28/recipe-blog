@@ -9,7 +9,7 @@ socialImage: images/Humming.jpg
 date: '2021-09-22'
 
 categories:
-  - Sauce
+  - Sauces
 
 ---
 
