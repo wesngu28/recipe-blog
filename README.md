@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recipe Blog
+
+Repo for the recipe blog for co2x5 homecooking!
+
+This blog is built using [Next.js](https://nextjs.org/), a framework for building server-rendered React apps. We use Typescript as our programming language, and have styled the blog using the [Tailwind CSS](https://tailwindcss.com/) library.
+
+Our posts are written in [Markdown](https://www.markdownguide.org/) and stored as .md files in the `/recipes` directory. We use the [markdown-it](https://markdown-it.github.io/) library to parse the Markdown and render it as HTML, and the [gray-matter](https://github.com/jonschlinkert/gray-matter) library to extract the frontmatter data (such as the title and date) from the Markdown files.
 
 ## Getting Started
 
-First, run the development server:
+To get started with the blog, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone the repository using `git clone`
+2. Install the dependencies using `npm install`
+3. Start the development server using `npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Adding a New Recipe
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To add a new recipe to the blog, follow these steps:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Create a new .md file in the `/recipes` directory
+2. Add the frontmatter data at the top of the file, surrounded by triple dashes (`---`). The frontmatter should include the `title` and `date` of the recipe.
+3. Add the recipe instructions in Markdown format below the frontmatter.
+4. Save the file. The blog will automatically update with the new recipe.
